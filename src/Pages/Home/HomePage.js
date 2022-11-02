@@ -4,21 +4,16 @@ import DiscountSection from '../../Components/Home/DiscountSection'
 import HomeCategory from '../../Components/Home/HomeCategory'
 import Slider from '../../Components/Home/Slider'
 import CardProductsContainer from '../../Components/Products/CardProductsContainer'
-import Footer from '../../Components/Utility/Footer'
-import NavBarLogin from '../../Components/Utility/NavBarLogin'
-
 const HomePage = () => {
     return (
         <div>
-            <NavBarLogin />
             <Slider />
-            <HomeCategory />
-            <CardProductsContainer title={'الأكثر مبيعا'} btntitle={'المزيد...'} />
-            <CardProductsContainer title={'الأكثر تقييما'} btntitle={'المزيد...'} />
+            <HomeCategory pathText={'/allcatecory'} />
+            <CardProductsContainer title={'الأكثر مبيعا'} btntitle={'المزيد...'} pathText={'/allproducts'} />
+            <CardProductsContainer title={'الأكثر تقييما'} btntitle={'المزيد...'} pathText={'/allproducts'} />
             <DiscountSection />
-            <CardProductsContainer title={'الأكثر عرضا'} btntitle={'المزيد...'} />
+            <CardProductsContainer title={'الأكثر عرضا'} btntitle={'المزيد...'} pathText={'/allproducts'} />
             <BrandFeatured />
-            <Footer />
         </div>
     )
 }

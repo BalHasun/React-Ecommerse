@@ -6,10 +6,10 @@ import pic from '../../Assets/Images/pic.png'
 import cat2 from '../../Assets/Images/cat2.png'
 import laptop from '../../Assets/Images/labtop.png'
 
-const HomeCategory = () => {
+const HomeCategory = ({pathText}) => {
     return (
         <Container>
-            <SubTitle title={'التصنيفات'} btntitle={'المزيد...'} />
+            <SubTitle title={'التصنيفات'} btntitle={'المزيد...'} pathText={pathText}/>
             <Row className='d-flex justify-content-between my-2'>
                 <CategoryCard background='#F4DBA4' img={pic} title={'تخفيضات'} />
                 <CategoryCard background='#0034FF' img={cat2} title={'عروض'} />

@@ -267,6 +267,15 @@ body {
     background-color: #ffffff;
 }
 
+.image-gallery-content .image-gallery-slide img{
+    /* max-height: calc(100vh - 80px); */
+    max-width: 75%;
+}
+
+.image-gallery-slides {
+    text-align: inherit !important;
+}
+
 .cat-text {
     color: #979797;
     font-family: "Almarai";

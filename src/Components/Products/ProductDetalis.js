@@ -13,7 +13,7 @@ const ProductDetalis = () => {
 
                 <Col lg="8">
 
-                       <ProductText />
+                    <ProductText />
                 </Col>
             </Row>
         </div>

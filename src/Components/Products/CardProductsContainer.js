@@ -1,20 +1,20 @@
-import { Row } from "react-bootstrap";
-import { Container, } from "react-bootstrap";
-import ProductCard from "./ProductCard";
-import SubTitle from "../Utility/SubTitle.js";
+import React from 'react'
+import { Container, Row } from 'react-bootstrap'
+import SubTiltle from '../Utility/SubTitle'
+import ProductCard from './ProductCard'
 
 const CardProductsContainer = ({ title, btntitle, pathText }) => {
-  return (
-    <Container>
-      <SubTitle title={title} btntitle={btntitle} pathText={pathText} />
-      <Row className="justify-content-between ">
-        <ProductCard title="1" />
-        <ProductCard title="2" />
-        <ProductCard title="3" />
-        <ProductCard title="4" />
-      </Row>
-    </Container>
-  );
-};
+    return (
+        <Container>
+            <SubTiltle title={title} btntitle={btntitle} pathText={pathText} />
+            <Row className='my-2 d-flex justify-content-between'>
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+            </Row>
+        </Container>
+    )
+}
 
-export default CardProductsContainer;
+export default CardProductsContainer

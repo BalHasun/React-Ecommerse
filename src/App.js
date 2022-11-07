@@ -6,6 +6,7 @@ import RigesterPage from './Pages/Auth/RigesterPage'
 import AllBrandsPage from "./Pages/Brands/AllBrandsPage";
 import AllCategory from "./Pages/Category/AllCategory";
 import HomePage from "./Pages/Home/HomePage";
+import ProductDetalisPage from "./Pages/Products/ProductDetalisPage";
 import ShopProducsPage from "./Pages/Products/ShopProducsPage";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/allcatecory" element={<AllCategory />} />
           <Route path="/allbrands" element={<AllBrandsPage />} />
           <Route path="/allproducts" element={<ShopProducsPage />} />
+          <Route path="/product/:id" element={<ProductDetalisPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />

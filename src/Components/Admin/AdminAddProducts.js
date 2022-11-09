@@ -1,21 +1,21 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-// import Multiselect from 'multiselect-react-dropdown';
+import Multiselect from 'multiselect-react-dropdown';
 import avatar from '../../Assets/Images/avatar.png'
 import add from '../../Assets/Images/add.png'
 const AdminAddProducts = () => {
 
-    // const onSelect = () => {
+    const onSelect = () => {
 
-    // }
-    // const onRemove = () => {
+    }
+    const onRemove = () => {
 
-    // }
+    }
 
-    // const options = [
-    //     { name: "التصنيف الاول", id: 1 },
-    //     { name: "التصنيف الثاني", id: 2 },
-    // ];
+    const options = [
+        { name: "التصنيف الاول", id: 1 },
+        { name: "التصنيف الثاني", id: 2 },
+    ];
 
     return (
         <div>
@@ -56,7 +56,7 @@ const AdminAddProducts = () => {
                         <option value="val2">التصنيف الرابع</option>
                     </select>
 
-                    {/* <Multiselect
+                    <Multiselect
                         className="mt-2 text-end"
                         placeholder="التصنيف الفرعي"
                         options={options}
@@ -64,7 +64,7 @@ const AdminAddProducts = () => {
                         onRemove={onRemove}
                         displayValue="name"
                         style={{ color: "red" }}
-                    /> */}
+                    />
                     <select
                         name="brand"
                         id="brand"

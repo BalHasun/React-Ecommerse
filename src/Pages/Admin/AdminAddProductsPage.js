@@ -13,7 +13,7 @@ const AdminAddProductsPage = () => {
                 </Col>
 
                 <Col sm="9" xs="10" md="10">
-                     <AdminAddProducts />
+                    <AdminAddProducts />
                 </Col>
             </Row>
         </Container>

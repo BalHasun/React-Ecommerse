@@ -1,23 +1,21 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import AdminSideBar from '../../Components/Admin/AdminSideBar'
-// import AdminAllProducts from '../../Components/Admin/AdminAllProducts'
 // import Pagination from '../../Components/Utility/Pagination'
-import AdminAddSubCategory from '../../Components/Admin/AdminAddSubCategory'
-const AdminAddSubCategoryPage = () => {
+import UserSideBar from '../../Components/User/UserSideBar'
+import UserAddAddress from '../../Components/User/UserAddAddress';
+const UserAddAddressPage = () => {
     return (
         <Container >
             <Row className='py-3'>
                 <Col sm="3" xs="2" md="2">
-                    <AdminSideBar />
+                    <UserSideBar />
                 </Col>
 
                 <Col sm="9" xs="10" md="10">
-                    <AdminAddSubCategory />
+                    <UserAddAddress />
                 </Col>
             </Row>
         </Container>
     )
 }
-
-export default AdminAddSubCategoryPage
+export default UserAddAddressPage

@@ -38,7 +38,7 @@ const ProductCard = () => {
                             سود كربون ساعة يد ذكية بيب إس أسود كربون{" "}
                         </div>
                     </Card.Title>
-                    <Card.Text>
+                    <Card.Title>
                         <div className="d-flex justify-content-between ">
                             <div className="d-flex">
                                 <img
@@ -55,7 +55,7 @@ const ProductCard = () => {
                                 <div className="card-currency mx-1">جنيه</div>
                             </div>
                         </div>
-                    </Card.Text>
+                    </Card.Title>
                 </Card.Body>
             </Card>
         </Col>

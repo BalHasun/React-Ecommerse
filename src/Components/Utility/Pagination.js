@@ -1,9 +1,15 @@
 import React from "react";
 import ReactPaginate from "react-paginate";
 
-const PaginationCompontent = () => {
-  const handlePageClick = () => { };
 
+const PaginationCompontent = ({ pageCount, onPress }) => {
+
+  // on press on the Pagination
+  const handlePageClick = (data) => {
+
+    // Submit the specified page number to props aria
+    onPress(data.selected + 1)
+  };
 
   return (
     <ReactPaginate
@@ -12,7 +18,9 @@ const PaginationCompontent = () => {
       onPageChange={handlePageClick}
       marginPagesDisplayed={2}
       pageRangeDisplayed={2}
-      pageCount={100}
+
+      // The number of pages coming from the props
+      pageCount={pageCount}
       previousLabel="السابق"
       containerClassName={"pagination justify-content-center p-3"}
       pageClassName={"page-item"}

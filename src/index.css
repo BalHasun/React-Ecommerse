@@ -267,7 +267,7 @@ body {
     background-color: #ffffff;
 }
 
-.image-gallery-content .image-gallery-slide img{
+.image-gallery-content .image-gallery-slide img {
     /* max-height: calc(100vh - 80px); */
     max-width: 75%;
 }
@@ -724,6 +724,12 @@ body {
     letter-spacing: 0;
     line-height: 17px;
     text-align: center;
+}
+
+#upload-photo {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 /* end filter */

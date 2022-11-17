@@ -1,37 +1,11 @@
-import React, { useState } from 'react'
-import { Col, Row } from 'react-bootstrap'
-import { useDispatch } from 'react-redux'
-import avatar from '../../Assets/Images/avatar.png'
-import { createGategory } from '../../redux/actions/categoryAction'
+import React from 'react'
+import { Col, Row, Spinner } from 'react-bootstrap'
+import { ToastContainer } from 'react-toastify'
+import HookAddCategory from '../../hook/category-hooks/HookAddCategory'
+
 const AdminAddCategory = () => {
 
-    const [img, setImage] = useState(avatar)
-    const [name, setName] = useState('')
-    const [selectedImage, setSelectedImage] = useState('')
-
-    const dispatch = useDispatch()
-    const onChangeImage = (e) => {
-
-        // set new image when the value change 
-        if (e.target.files && e.target.files[0]) {
-            setImage(URL.createObjectURL(e.target.files[0]))
-            setSelectedImage(e.target.files[0])
-        }
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const formDate = new FormData();
-        formDate.append('name', name)
-        formDate.append('image', selectedImage)
-
-        dispatch(createGategory(formDate))
-
-        setImage(avatar);
-        setName('');
-
-    }
+    const [img, name, isPress, loading, onChangeName, onChangeImage, handleSubmit] = HookAddCategory();
     return (
         <div>
             <Row className="justify-content-start ">
@@ -47,7 +21,7 @@ const AdminAddCategory = () => {
                     <input
                         type="text"
                         value={name}
-                        onChange={(e) => { setName(e.target.value) }}
+                        onChange={onChangeName}
                         className="input-form d-block mt-3 px-3"
                         placeholder="اسم التصنيف"
                     />
@@ -58,7 +32,12 @@ const AdminAddCategory = () => {
                     <button onClick={handleSubmit} className="btn-save d-inline mt-2 ">حفظ التعديلات</button>
                 </Col>
             </Row>
+            {
+                isPress ? loading ? <Spinner animation="border" variant="primary" /> : <h4>تم الانتهاء</h4> : null
+            }
+            <ToastContainer autoClose={3000} pauseOnHover={false} />
         </div>
+
     )
 }
 

@@ -1,38 +1,22 @@
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Spinner } from "react-bootstrap";
 import BrandCard from "./BrandCard";
-import brand1 from "../../Assets/Images/brand1.png";
-import brand2 from "../../Assets/Images/brand2.png";
-import brand3 from "../../Assets/Images/brand3.png";
-const BrandContainer = () => {
+
+const BrandContainer = ({ brand, loading }) => {
+
   return (
     <div className="my-3">
       <Container>
         <div className="admin-content-text ">كل الماركات</div>
-        <Row className="my-1 justify-content-between">
-          <BrandCard img={brand1} />
-          <BrandCard img={brand2} />
-          <BrandCard img={brand3} />
-          <BrandCard img={brand2} />
-          <BrandCard img={brand1} />
-          <BrandCard img={brand3} />
-          <BrandCard img={brand1} />
-          <BrandCard img={brand2} />
-          <BrandCard img={brand3} />
-          <BrandCard img={brand2} />
-          <BrandCard img={brand1} />
-          <BrandCard img={brand3} />
-          <BrandCard img={brand1} />
-          <BrandCard img={brand2} />
-          <BrandCard img={brand3} />
-          <BrandCard img={brand2} />
-          <BrandCard img={brand1} />
-          <BrandCard img={brand3} />
-          <BrandCard img={brand2} />
-          <BrandCard img={brand1} />
-          <BrandCard img={brand1} />
-          <BrandCard img={brand2} />
-          <BrandCard img={brand2} />
-          <BrandCard img={brand3} />
+        <Row className='d-flex justify-content-between my-2'>
+          {
+            loading === false ? (
+              brand.data ? (
+                brand.data.map((item, index) => {
+                  return (<BrandCard key={index} img={item.image} />)
+                })
+              ) : <h4>لا يوجد ماركات</h4>
+            ) : <Spinner animation="border" variant="primary" />
+          }
         </Row>
       </Container>
     </div>

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Col,Card,Row } from 'react-bootstrap'
+import { Col, Card, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import prod1 from '../../Assets/Images/prod1.png'
+
 const AdminAllProductsCard = () => {
     return (
         <Col xs="12" sm="6" md="5" lg="4" className="d-flex">
@@ -28,7 +29,7 @@ const AdminAllProductsCard = () => {
                                 سود كربون ساعة يد ذكية بيب إس أسود كربون{" "}
                             </div>
                         </Card.Title>
-                        <Card.Text>
+                        <Card.Title>
                             <div className="d-flex justify-content-between">
                                 <div className="card-rate">4.5</div>
                                 <div className="d-flex">
@@ -36,7 +37,7 @@ const AdminAllProductsCard = () => {
                                     <div className="card-price">880</div>
                                 </div>
                             </div>
-                        </Card.Text>
+                        </Card.Title>
                     </Card.Body>
                 </Link>
             </Card>

@@ -9,6 +9,8 @@ export const CREATE_BRAND = 'CREATE_BRAND'
 
 // for create sub category
 export const CREATE_SUB_CATEGORY = 'CREATE_SUB_CATEGORY'
+export const GET_SUB_CATEGORY = 'GET_SUB_CATEGORY'
+
 
 // to category and brand both
 export const GET_ERROR = 'GET_ERROR'
